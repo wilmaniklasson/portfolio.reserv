@@ -1,20 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './intro.css';
 import avatarImg from '../assets/avatar.svg';
 import githubImg from '../assets/Github.svg';
 import linkedinImg from '../assets/LinkedIn.svg';
 
-
 const Intro = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuClick = () => {
+    console.log('Hamburgermenu klickad!');
+    setIsMenuOpen(prevState => !prevState);
+  };
+
   return (
     <>
       <section className="intro">
         <section className="container">
-        <aside className="sidebar">
-            <button className="button" id="about">OM MIG</button>
-            <button className="button" id="projects">PROJEKT</button>
-            <button className="button" id="cv">CV</button>
+          <div className="navbar-toggle" id="mobile-menu" onClick={handleMenuClick}>
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </div>
+          <aside className="navbar">
+            <nav className="navigation-buttons" style={{ display: isMenuOpen ? 'flex' : 'none' }}>
+              <button className="button" id="about">OM MIG</button>
+              <button className="button" id="projects">PROJEKT</button>
+              <button className="button" id="cv">CV</button>
+              <button className="button" id="english">English</button>
+            </nav>
           </aside>
+
           <div className="main-content">
             <div className="text-content">
               <h1 className="greeting">Hej! <br /> mitt namn är</h1>
