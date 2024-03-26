@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './intro.css';
-import Navbar from './Navbar'; // Importera den nya Navbar-komponenten
+import Navbar from './Navbar'; 
 import avatarImg from '../assets/avatar.svg';
 import githubImg from '../assets/Github.svg';
 import linkedinImg from '../assets/LinkedIn.svg';

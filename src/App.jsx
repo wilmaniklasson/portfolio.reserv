@@ -1,6 +1,7 @@
 import './App.css'
 import './index.css'
 import Intro from './components/intro';
+import About from './components/About';
 
 function App() {
   
@@ -8,6 +9,7 @@ function App() {
   return (
     <>
       <Intro />
+      <About />
      
      
     </>
