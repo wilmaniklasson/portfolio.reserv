@@ -1,13 +1,5 @@
-/* styles.css */
 
-/* General styles */
-body {
-    font-family: 'Roboto Mono', monospace;
-    background-color: #333;
-    color: white;
-    margin: 0;
-    padding: 0;
-}
+  /* intro.css */
 
 .intro {
     display: flex;
@@ -32,15 +24,15 @@ body {
     align-items: flex-start;
     padding: 1rem;
     margin-right: 1rem;
-  }
-  
-  .navigation-buttons {
+}
+
+.navigation-buttons {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
+}
 
-  .button {
+.button {
     padding: 15px 30px;
     margin-bottom: 10px;
     cursor: pointer;
@@ -70,16 +62,12 @@ body {
     background-color: #5D6CBE;
     font-weight: 700;
 }
-  
-  
 
 .main-content {
     display: flex;
     position: relative;
-    flex-wrap: wrap; /
+    flex-wrap: wrap;
 }
-
-
 
 .text-content {
     text-align: left;
@@ -165,12 +153,10 @@ body {
     font-weight: lighter;
 }
 
-
 .about {
-   height: 300px;
-   background-color: #5DBE8C;
+    height: 300px;
+    background-color: #5DBE8C;
 }
-
 
 #mobile-menu {
     position: absolute;
@@ -179,63 +165,55 @@ body {
     z-index: 2;
 }
 
-
-  
-
 /* CSS-animering */
 @keyframes slideIn {
     from {
-      opacity: 0;
-      transform: translateY(50px);
+        opacity: 0;
+        transform: translateY(50px);
     }
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
-  
-  #animated-text {
+}
+
+#animated-text {
     animation: slideIn 1s ease-in-out;
     opacity: 1;
-  }
-  
-  #animate-me {
+}
+
+#animate-me {
     animation: slideIn 1.5s ease-in-out;
-    opacity: 1; 
-  }
+    opacity: 1;
+}
 
-
-
-
-  @media screen and (max-width: 768px) {
-  
-  
+@media screen and (max-width: 768px) {
     @keyframes rotateForward {
-      0% { transform: translateY(0) rotate(0); }
-      100% { transform: translateY(8px) rotate(45deg); }
+        0% { transform: translateY(0) rotate(0); }
+        100% { transform: translateY(8px) rotate(45deg); }
     }
-    
+
     @keyframes rotateBackward {
-      0% { transform: translateY(0) rotate(0); }
-      100% { transform: translateY(-8px) rotate(-45deg); }
+        0% { transform: translateY(0) rotate(0); }
+        100% { transform: translateY(-8px) rotate(-45deg); }
     }
-  
+
     .fade-out {
-      opacity: 0;
+        opacity: 0;
     }
-  
+
     .rotate-forward {
-      animation: rotateForward 0.6s forwards;
+        animation: rotateForward 0.6s forwards;
     }
-    
+
     .rotate-backward {
-      animation: rotateBackward 0.6s forwards;
+        animation: rotateBackward 0.6s forwards;
     }
-  }  
-  
-  
-  @media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 768px) {
     .navigation-buttons {
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 0;
@@ -243,20 +221,17 @@ body {
         width: 100%;
         text-align: center;
         align-items: center;
-        background-color: #0d0d0d;
+        background-color: #333;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
         z-index: 1;
-       
-        
-        
     }
-  
+
     .navbar-toggle {
         cursor: pointer;
         display: block;
         padding: 10px;
-
     }
-  
+
     .navbar-toggle span {
         display: block;
         height: 3px;
@@ -264,30 +239,28 @@ body {
         background-color: #fff;
         margin: 5px 0;
     }
-  
+
+    .navigation-buttons.open {
+        display: flex;
+    }
 }
-  
 
-    /* Media query for 768px */
+/* Media query for 768px */
 @media screen and (max-width: 768px) {
-
     .button {
         padding: 15px 30px;
         margin: 0 0 10px 0;
-        width: 90%
-       
+        width: 90%;
     }
-    
+
     #about {
-       margin-top: 3rem;
+        margin-top: 3rem;
     }
 
     #english {
         margin-bottom: 3rem;
-        
     }
 
-  
     .sidebar {
         display: flex;
         flex-direction: row;
@@ -302,57 +275,46 @@ body {
         flex-direction: column;
     }
 
-    .description {  
+    .description {
         max-width: 550px;
         font-size: 1.3em;
     }
-
-
 }
 
-    /* Media query for 600px */
+/* Media query for 600px */
 @media screen and (max-width: 600px) {
-
-        .description {  
-            max-width: 400px;
-            font-size: 1.3em;
-        }
-        
-        .name {
-            font-size: 4em;
-        }
-    
-
-        .profile-pic {
-                margin-left: 5rem;
-            }
-
-        .text-content {
-            margin-left: 5rem;
-        
-        }
-
-        .main-content {
-            margin-left: 3em;
-        }
-
+    .description {
+        max-width: 400px;
+        font-size: 1.3em;
     }
 
-
-    
-    @media screen and (max-width: 400px) {
-
-        .main-content {
-            margin-left: 1.5em;
-        }
-
-
+    .name {
+        font-size: 4em;
     }
 
+    .profile-pic {
+        margin-left: 5rem;
+    }
 
-    /* Media query for 480px */
+    .text-content {
+        margin-left: 5rem;
+    }
+
+    .main-content {
+        margin-left: 3em;
+    }
+}
+
+/* Media query for 400px */
+@media screen and (max-width: 400px) {
+    .main-content {
+        margin-left: 1.5em;
+    }
+}
+
+
+/* Media query for 480px */
 @media screen and (max-width: 480px) {
-
     .speech-bubble {
         max-width: 80%;
         max-height: 30px;
@@ -370,8 +332,6 @@ body {
         font-size: 1em;
     }
 
-   
-
     .profile-pic {
         margin-left: 1rem;
     }
@@ -379,17 +339,9 @@ body {
     .text-content {
         margin-left: 1rem;
     }
-
-
 }
 
-
-
- 
-    
-    
 @media screen and (max-width: 390px) {
-
     .description {
         max-width: 340px;
         font-size: 1em;
@@ -398,42 +350,26 @@ body {
     .greeting {
         font-size: 1.5em;
     }
-    
+
     .name {
         font-size: 3em;
     }
 
-    
-     
     .text-content {
         margin-left: 0;
-    
     }
 
     .profile-pic {
         margin-left: 0rem;
     }
 
-.text-content {
-    margin-left: 2rem;
-
+    .text-content {
+        margin-left: 2rem;
+    }
 }
-    
-    
-    
+
+@media screen and (max-width: 355px) {
+    .main-content {
+        margin-left: 1;
     }
-    
-  
-
-
-   
-    @media screen and (max-width: 355px) {
-
-        .main-content {
-            margin-left: 1;
-        }
-
-    }
-        
-        
-    
+}
