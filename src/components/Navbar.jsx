@@ -19,7 +19,7 @@ const Navbar = () => {
         <button className="button" id="about">OM MIG</button>
         <button className="button" id="projects">PROJEKT</button>
         <button className="button" id="cv">CV</button>
-        <button className="button" id="english">English</button>
+        <button className="button" id="english">ENGLISH</button>
       </nav>
     </div>
   );
