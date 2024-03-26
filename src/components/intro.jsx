@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './intro.css';
+import Navbar from './Navbar'; // Importera den nya Navbar-komponenten
 import avatarImg from '../assets/avatar.svg';
 import githubImg from '../assets/Github.svg';
 import linkedinImg from '../assets/LinkedIn.svg';
@@ -15,20 +16,7 @@ const Intro = () => {
     <>
       <section className="intro">
         <section className="container">
-          <div className="navbar">
-            <div className={`navbar-toggle ${isMenuOpen ? 'open' : ''}`} id="mobile-menu" onClick={toggleMenu}>
-              <span className={`bar ${isMenuOpen ? 'rotate-forward' : ''}`}></span>
-              <span className={`bar ${isMenuOpen ? 'fade-out' : ''}`}></span>
-              <span className={`bar ${isMenuOpen ? 'rotate-backward' : ''}`}></span>
-            </div>
-            <nav className={`navigation-buttons ${isMenuOpen ? 'open' : ''}`}>
-              <button className="button" id="about">OM MIG</button>
-              <button className="button" id="projects">PROJEKT</button>
-              <button className="button" id="cv">CV</button>
-              <button className="button" id="english">English</button>
-            </nav>
-          </div>
-
+          <Navbar isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} /> {/* Skicka in tillstånd och funktion som props */}
           <div className="main-content">
             <div className="text-content">
               <h1 className="greeting" id='animated-text'>Hej! <br /> mitt namn är</h1>
